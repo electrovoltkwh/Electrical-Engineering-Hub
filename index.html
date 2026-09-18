@@ -372,7 +372,95 @@ Lab Manuals and Technical Resources.
 <button id="topBtn" onclick="topFunction()">
 ⬆
 </button>
+<!-- ================= PDF PASSWORD POPUP ================= -->
 
+<div id="pdfModal" class="pdf-modal">
+
+    <div class="pdf-box">
+
+        <button class="close-pdf" id="closePdf">
+            ✕
+        </button>
+
+        <!-- PASSWORD SCREEN -->
+
+        <div id="codeScreen">
+
+            <div class="lock-icon">
+                🔐
+            </div>
+
+            <h2>Protected PDF</h2>
+
+            <p>
+                Enter 4-digit access code
+            </p>
+
+            <input
+                type="password"
+                id="pdfCode"
+                maxlength="4"
+                inputmode="numeric"
+                placeholder="••••"
+                autocomplete="off"
+            >
+
+            <button
+                id="verifyPdf"
+                class="verify-btn">
+
+                🔓 Verify
+
+            </button>
+
+            <p id="errorMessage"
+               class="error-message">
+            </p>
+
+        </div>
+
+
+        <!-- PDF ACCESS SCREEN -->
+
+        <div id="pdfScreen" style="display:none;">
+
+            <div class="success-message">
+                ✅ Access Granted
+            </div>
+
+            <h2 id="pdfTitle">
+                📘 PDF Notes
+            </h2>
+
+            <div class="pdf-actions">
+
+                <a
+                    id="viewPdf"
+                    href="#"
+                    target="_blank"
+                    class="pdf-view-btn">
+
+                    👁️ View PDF
+
+                </a>
+
+                <a
+                    id="downloadPdf"
+                    href="#"
+                    download
+                    class="pdf-download-btn">
+
+                    ⬇️ Download PDF
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
 <script src="script.js"></script>
 </footer>
 </body>
